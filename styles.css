@@ -1,5 +1,5 @@
 :root {
-  --blue: #74b6e7;
+  --blue: #73b4e3;
   --blue-dark: #2f86cb;
   --ink: #ffffff;
   --text: #123757;
@@ -17,7 +17,7 @@ body {
   min-height: 100vh;
   font-family: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: var(--ink);
-  background: #ecf7ff;
+  background: #eaf6ff;
 }
 
 .page-shell {
@@ -43,6 +43,46 @@ body {
   grid-row: span 2;
   padding: clamp(26px, 4vw, 56px);
 }
+
+.phone-mockup {
+  position: absolute;
+  right: min(12vw, 120px);
+  bottom: 18px;
+  z-index: 1;
+  width: 330px;
+  height: 610px;
+  padding: 14px;
+  border: 12px solid #07111e;
+  border-radius: 54px;
+  background: #0c1723;
+  box-shadow: 0 26px 50px rgba(7, 17, 30, 0.32);
+  transform: rotate(-5deg);
+}
+
+.phone-screen {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  padding: 58px 24px 24px;
+  border-radius: 38px;
+  background: linear-gradient(180deg, rgba(125, 190, 235, 0.95), rgba(99, 171, 225, 0.95));
+}
+
+.phone-time,
+.phone-menu,
+.phone-logo {
+  position: relative;
+  z-index: 2;
+  font-weight: 800;
+}
+
+.phone-time { position: absolute; top: 22px; left: 28px; }
+.phone-pill { position: absolute; top: 18px; left: 50%; width: 94px; height: 28px; border-radius: 999px; background: #07111e; transform: translateX(-50%); }
+.phone-menu { position: absolute; top: 56px; right: 28px; font-size: 24px; }
+.phone-logo { margin: 0 0 26px; color: rgba(255, 255, 255, 0.9); }
+.phone-screen h2 { position: relative; z-index: 2; margin: 0; font-size: 58px; }
+.phone-screen p:not(.phone-logo) { position: relative; z-index: 2; max-width: 240px; color: rgba(255,255,255,.72); }
+.phone-tooth { position: absolute; left: 28px; right: 28px; bottom: -44px; height: 230px; border-radius: 48% 52% 42% 42% / 38% 38% 62% 62%; background: radial-gradient(circle at 38% 22%, #fff, #eaf6ff 74%); }
 
 .topbar,
 .nav-links,
@@ -81,7 +121,7 @@ body {
   text-decoration: none;
 }
 
-.hero-copy { max-width: 650px; margin-top: 72px; position: relative; z-index: 2; }
+.hero-copy { max-width: 640px; margin-top: 72px; position: relative; z-index: 3; }
 
 .eyebrow {
   margin: 0 0 14px;
@@ -159,6 +199,7 @@ h2 {
   position: absolute;
   right: -30px;
   bottom: -50px;
+  z-index: 2;
   width: min(58vw, 610px);
   height: 470px;
 }
@@ -397,6 +438,7 @@ button:hover { transform: translateY(-2px); box-shadow: 0 16px 30px rgba(241, 25
 
 @media (max-width: 980px) {
   .page-shell { grid-template-columns: 1fr; grid-template-rows: auto; }
+  .phone-mockup { opacity: 0.38; right: -30px; transform: rotate(-5deg) scale(0.86); transform-origin: right bottom; }
   .hero-main { min-height: 760px; grid-row: auto; }
   .contact-card { grid-column: auto; align-items: flex-start; flex-direction: column; }
   .booking-form { grid-template-columns: 1fr; }
@@ -409,6 +451,7 @@ button:hover { transform: translateY(-2px); box-shadow: 0 16px 30px rgba(241, 25
   .hero-main { min-height: 700px; padding: 24px; }
   .hero-copy { margin-top: 54px; }
   h1 { font-size: 58px; }
+  .phone-mockup { display: none; }
   .tooth-stage { right: -150px; transform: scale(0.78); transform-origin: right bottom; }
   .cta-badge { width: 126px; height: 126px; left: 28px; bottom: 52px; font-size: 12px; }
   .doctor-card { grid-template-columns: 1fr; }
