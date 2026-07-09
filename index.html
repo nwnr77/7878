@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ЛюмиДент — эстетическая стоматология в Москве</title>
+  <meta name="description" content="Вымышленный премиальный сайт стоматологии ЛюмиДент: имплантация, виниры, ортодонтия и цифровая диагностика.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero-card hero-main" aria-labelledby="main-title">
+      <nav class="topbar" aria-label="Главная навигация">
+        <a class="brand" href="#top" aria-label="ЛюмиДент">
+          <span class="brand-mark">✦</span>
+          <span>ЛюмиДент</span>
+        </a>
+        <div class="nav-links">
+          <a href="#services">Услуги</a>
+          <a href="#doctor">Врач</a>
+          <a href="#contact">Запись</a>
+        </div>
+      </nav>
+
+      <div class="hero-copy">
+        <p class="eyebrow">Цифровая стоматология • Москва</p>
+        <h1 id="main-title">Вернём улыбке спокойное сияние</h1>
+        <p class="lead">Диагностика за один визит, бережное лечение без спешки и персональный план эстетики улыбки.</p>
+      </div>
+
+      <div class="trust-row" aria-label="Рейтинг клиники">
+        <div class="avatar-stack" aria-hidden="true">
+          <span>АН</span><span>МК</span><span>+4k</span>
+        </div>
+        <div>
+          <strong>4,9 из 5</strong>
+          <span>по отзывам пациентов</span>
+        </div>
+      </div>
+
+      <div class="tooth-stage" aria-hidden="true">
+        <div class="spark spark-one"></div>
+        <div class="spark spark-two"></div>
+        <div class="tooth-shape"></div>
+        <div class="mini-team">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <a class="cta-badge" href="#contact" aria-label="Записаться на консультацию">
+        <span>Записаться</span>
+        <strong>↗</strong>
+      </a>
+    </section>
+
+    <aside class="hero-card implant-card" id="services">
+      <p class="eyebrow">Имплантация</p>
+      <h2>Импланты без страха</h2>
+      <div class="implant-visual" aria-hidden="true">
+        <div class="crown"></div>
+        <div class="screw"></div>
+      </div>
+      <p>3D-планирование, навигационный шаблон и мягкое восстановление.</p>
+    </aside>
+
+    <aside class="hero-card doctor-card" id="doctor">
+      <div class="doctor-portrait" aria-hidden="true">
+        <div class="head"></div>
+        <div class="body"></div>
+      </div>
+      <div class="doctor-info">
+        <p class="eyebrow">Ведущий врач</p>
+        <h2>д-р Мира Соколова</h2>
+        <p>12 лет опыта в эстетической стоматологии и микропротезировании.</p>
+        <div class="stars" aria-label="Пять звёзд">★★★★★</div>
+        <span>1 284 отзыва</span>
+      </div>
+    </aside>
+
+    <section class="hero-card contact-card" id="contact">
+      <div>
+        <p class="eyebrow">Первый визит</p>
+        <h2>Консультация и цифровой снимок — сегодня</h2>
+      </div>
+      <form class="booking-form" aria-label="Форма записи">
+        <label>
+          Ваше имя
+          <input type="text" name="name" placeholder="Анна" autocomplete="name">
+        </label>
+        <label>
+          Телефон
+          <input type="tel" name="phone" placeholder="+7 900 000-00-00" autocomplete="tel">
+        </label>
+        <button type="submit">Хочу красивую улыбку</button>
+      </form>
+      <p class="form-note">Демо-сайт: данные никуда не отправляются.</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
