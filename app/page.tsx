@@ -1,6 +1,15 @@
-import { MassageSchoolSite } from "@/components/site";
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 
-/** Home page for the premium massage school landing experience. */
+/** Home page renders the single-file Vesper.ai landing page. */
 export default function Home() {
-  return <MassageSchoolSite />;
+  const html = readFileSync(join(process.cwd(), "index.html"), "utf8");
+
+  return (
+    <iframe
+      srcDoc={html}
+      title="Vesper.ai — Operational AI Infrastructure"
+      style={{ width: "100vw", height: "100dvh", border: 0, display: "block", background: "#000" }}
+    />
+  );
 }
